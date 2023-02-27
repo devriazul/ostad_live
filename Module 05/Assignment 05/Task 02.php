@@ -22,8 +22,8 @@ class Person {
   }
   
   $person = new Person();
-  $person->setName("John Doe");
-  $person->setEmail("johndoe@example.com");
+  $person->setName("Riazul Islam");
+  $person->setEmail("engr.riazul@gmail.com");
   
   echo "Name: " . $person->getName() . "<br>";
   echo "Email: " . $person->getEmail();
