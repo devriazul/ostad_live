@@ -26,11 +26,11 @@
 			echo "Both fields are required.";
 		} else {
 			// Check if email and password are correct (you would need to add your own validation code here)
-			$correct_email = "example@example.com";
+			$correct_email = "admin@example.com";
 			$correct_password = "password123";
 			if ($email === $correct_email && $password === $correct_password) {
 				// Redirect to welcome page
-				header("Location: welcome.php?firstname=John");
+				header("Location: welcome.php?firstname=Riaz");
 			} else {
 				echo "Invalid email or password.";
 			}
