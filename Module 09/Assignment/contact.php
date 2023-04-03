@@ -17,14 +17,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="contact-page">
         <h1>Contact Us</h1>
         <p>Fill out the form below to send us a message:</p>
-        <form action="process.php" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required>
@@ -51,3 +51,27 @@
 </body>
 
 </html>
+
+<?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$name = test_input($_POST["name"]);
+		$email = test_input($_POST["email"]);
+		$subjects = test_input($_POST["subject"]);
+		$message = test_input($_POST["message"]);
+		$to = "youremail@example.com";
+		$subject = "Contact Form Submission";
+		$headers = "From: $email\n";
+		$headers .= "Reply-To: $email\n";
+		$headers .= "Content-type: text/html; charset=UTF-8\n";
+		$message = "<p>Name: $name</p>\n<p>Email: $email</p>\n <p>Subject: $subjects</p>\n<p>Message: $message</p>";
+		mail($to, $subject, $message, $headers);
+		echo "<p>Thank you for contacting us. We will get back to you soon.</p>";
+	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+	?>
