@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    include 'db_conection.php';
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,15 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li class="active"><a href="blog.php">Blog</a></li>
+                <li class="active">
+                    <div class="dropdown">
+                    <a href="blog.php">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="add-post.php">Add Blog</a><br>
+                            <a href="blog.php">All Blog</a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -30,26 +40,8 @@
                 <h1>Blog</h1>
 
                 <div class="post">
-                    <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Post Image">
-                    <h2>Post Title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, justo eget ornare sagittis, velit velit bibendum tortor, vel luctus velit lectus sit amet mauris. </p>
-                    <a href="post.php" class="read-more">Read More</a>
+                    <?php include('retrive-all-post.php'); ?>
                 </div>
-
-                <div class="post">
-                    <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Post Image">
-                    <h2>Post Title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, justo eget ornare sagittis, velit velit bibendum tortor, vel luctus velit lectus sit amet mauris. </p>
-                    <a href="post.php" class="read-more">Read More</a>
-                </div>
-
-                <div class="post">
-                    <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Post Image">
-                    <h2>Post Title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, justo eget ornare sagittis, velit velit bibendum tortor, vel luctus velit lectus sit amet mauris. </p>
-                    <a href="post.php" class="read-more">Read More</a>
-                </div>
-
             </section>
 
             <aside class="sidebar">

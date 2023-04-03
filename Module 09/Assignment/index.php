@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    include 'db_conection.php' ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,15 @@
         <nav>
             <ul>
                 <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li>
+                    <div class="dropdown">
+                    <a href="blog.php">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="add-post.php">Add Blog</a><br>
+                            <a href="blog.php">All Blog</a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -24,12 +33,9 @@
 
     <section class="featured">
         <div class="container">
-            <h1>Latest Post</h1>
+            <h1>Latest Blog</h1>
             <div class="post">
-                <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Post Image">
-                <h2>Post Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, justo eget ornare sagittis, velit velit bibendum tortor, vel luctus velit lectus sit amet mauris. </p>
-                <a href="post.php" class="read-more">Read More</a>
+                <?php include('retrieve-posts.php'); ?>
             </div>
         </div>
     </section>
