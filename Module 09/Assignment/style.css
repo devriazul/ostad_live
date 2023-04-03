@@ -61,6 +61,7 @@ main {
     width: 100%;
     max-width: 600px;
     height: auto;
+    border-radius: 10px;
 }
 
 .post h3 {
@@ -81,6 +82,13 @@ main {
     border-radius: 5px;
     text-decoration: none;
     margin-top: 20px;
+}
+
+.social-share,
+a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
 
 footer {
@@ -141,12 +149,16 @@ aside {
     width: 25%;
 }
 
-form input[type="text"] {
-    width: 80%;
+form input[type="text"],
+[type="email"] {
+    width: 60%;
     padding: 10px;
     border-radius: 5px;
-    border: none;
     margin-bottom: 10px;
+}
+
+textarea {
+    width: 60%;
 }
 
 form button[type="submit"] {
@@ -156,6 +168,7 @@ form button[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    width: 100px;
 }
 
 form button[type="submit"]:hover {
@@ -187,7 +200,7 @@ ul li a:hover {
 .contact-page {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contact-page h1 {
@@ -205,7 +218,7 @@ ul li a:hover {
 }
 
 .contact-page .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact-page label {
@@ -216,7 +229,7 @@ ul li a:hover {
 .contact-page input,
 .contact-page textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #050505;
     border-radius: 5px;
     font-size: 16px;
     margin-top: 5px;
