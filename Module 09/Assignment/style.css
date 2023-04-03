@@ -5,33 +5,41 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #f9f9f9;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
 }
 
 .logo img {
-    height: 50px;
+    max-width: 100%;
 }
 
 nav ul {
     display: flex;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+nav ul li.active a,
+nav ul li a:hover {
+    color: #007bff;
 }
 
 main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -171,4 +179,59 @@ ul li a {
 
 ul li a:hover {
     text-decoration: underline;
+}
+
+
+/* contact page */
+
+.contact-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-page p {
+    margin-bottom: 40px;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-page label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-page input,
+.contact-page textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.contact-page input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-page input[type="submit"]:hover {
+    background-color: #0062cc;
 }
