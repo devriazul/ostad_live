@@ -16,7 +16,15 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li>
+                    <div class="dropdown">
+                    <a href="blog.php">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="add-post.php">Add Blog</a><br>
+                            <a href="blog.php">All Blog</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="active"><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
