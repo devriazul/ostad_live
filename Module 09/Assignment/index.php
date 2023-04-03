@@ -11,12 +11,12 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="https://devriazul.fastitbd.com/images/riazul.png" alt="Logo" class="logo" width="50px"></a>
+            <a href="index.php"><img src="https://devriazul.fastitbd.com/images/riazul.png" alt="Logo" class="logo" width="50px"></a>
         </div>
         <nav>
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -29,7 +29,7 @@
                 <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Post Image">
                 <h2>Post Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, justo eget ornare sagittis, velit velit bibendum tortor, vel luctus velit lectus sit amet mauris. </p>
-                <a href="post.html" class="read-more">Read More</a>
+                <a href="post.php" class="read-more">Read More</a>
             </div>
         </div>
     </section>
