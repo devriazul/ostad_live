@@ -1,5 +1,6 @@
 <?php
     include "inc/header.php";
+    include "inc/portfolio.php";
 ?>
 
     <!-- Projects Section -->
@@ -10,8 +11,9 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel tincidunt eros, vel facilisis nisi. </p>
+                            <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                            <img src="<?php echo $row['image_url']; ?>" alt="">
+                            <p class="card-text"><?php echo $row['description']; ?> </p>
                             <a href="#" class="btn btn-primary stretched-link">View Project</a>
                         </div>
                     </div>
