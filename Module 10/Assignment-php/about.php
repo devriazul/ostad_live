@@ -17,7 +17,7 @@
                         Ut vel elit sit amet nibh suscipit sodales. Sed vel lorem a enim iaculis consectetur ut vel est.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="https://picsum.photos/500/500" alt="About Us" class="img-fluid">
+                    <img src="https://picsum.photos/500/500" alt="About Us" class="img-fluid rounded">
                 </div>
             </div>
         </div>
