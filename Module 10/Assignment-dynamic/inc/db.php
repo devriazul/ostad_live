@@ -1,11 +1,12 @@
 <?php
-// Establish connection to database
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "small_business_website";
-$conn = new mysqli($host, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'small_business_website';
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+if (!$conn) {
+    die('Failed to connect to database: ' . mysqli_connect_error());
 }
 ?>

@@ -1,13 +1,6 @@
 <?php
 // Establish connection to database
-$host = "localhost";
-$username = "your_db_username";
-$password = "your_db_password";
-$dbname = "small_business_website";
-$conn = new mysqli($host, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include "inc/db.php";
 
 // Function to retrieve blog posts
 function getBlogPosts() {
