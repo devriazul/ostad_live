@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Post;
 
 class Category extends Model
 {
@@ -8,5 +11,9 @@ class Category extends Model
     {
         return $this->hasMany(Post::class);
     }
-}
 
+    public function latestPost()
+    {
+        return $this->hasOne(Post::class)->latest();
+    }
+}
