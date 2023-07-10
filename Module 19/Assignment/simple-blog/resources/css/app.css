@@ -1,0 +1,24 @@
+/* Add your custom CSS code here */
+
+/* Example styles for the blog project */
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
