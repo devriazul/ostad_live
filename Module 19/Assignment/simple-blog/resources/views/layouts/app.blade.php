@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Simple Blog</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+    <a class="navbar-brand" href="https://devriazul.com/" target="_blank">
+        <img src="{{asset('https://devriazul.com/img/logo/devriazul.png')}}" alt="Logo" class="logo"> 
+        
+    </a>
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">Home</a>
@@ -28,7 +32,8 @@
                 <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>
-    </nav>
+    </div>
+</nav>
 
     <div class="container mt-4">
         @yield('content')
