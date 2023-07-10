@@ -3,7 +3,7 @@
 @section('content')
     @if ($blog)
         <div class="card mb-4">
-            <img src="{{ asset($blog->image) }}" class="card-img-top" alt="Blog Image" style="height:350px">
+            <img src="{{ asset($blog->image) }}" class="card-img-top" alt="Blog Image" style="height:400px">
             <div class="card-body">
                 <h5 class="card-title">{{ $blog->title }}</h5>
                 <p class="card-text">{{ $blog->content }}</p>
