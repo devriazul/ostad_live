@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Models;
+namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BlogPost;
+use Illuminate\Http\Request;
 
-class BlogPost extends Model
+class BlogPostController extends Controller
 {
-    protected $fillable = [
-        'title', 'content'
-    ];
+    public function show($id)
+    {
+        $blogPost = BlogPost::with('comments')->findOrFail($id);
 
-    // Rest of the code...
+        return view('blog.show', compact('blogPost'));
+    }
 }
