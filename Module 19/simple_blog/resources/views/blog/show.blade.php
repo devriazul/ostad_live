@@ -1,22 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{ $blogPost->title }}</h1>
-    <p>{{ $blogPost->content }}</p>
+    @if ($blogPost)
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">{{ $blogPost->title }}</h1>
+                <p class="card-text">{{ $blogPost->content }}</p>
 
-    <h2>Comments</h2>
-    @foreach($blogPost->comments as $comment)
-        <div class="comment">
-            <p>{{ $comment->content }}</p>
+                <h2>Comments</h2>
+                @if ($blogPost->comments)
+                    @foreach($blogPost->comments as $comment)
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <p class="card-text">{{ $comment->content }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <p>No comments found.</p>
+                @endif
+
+                <h2>Add a Comment</h2>
+                <form id="comment-form">
+                    <input type="hidden" id="blog-post-id" value="{{ $blogPost->id }}">
+                    <textarea id="comment-content" class="form-control mb-2" placeholder="Enter your comment"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-    @endforeach
-
-    <h2>Add a Comment</h2>
-    <form id="comment-form">
-        <input type="hidden" id="blog-post-id" value="{{ $blogPost->id }}">
-        <textarea id="comment-content" placeholder="Enter your comment"></textarea>
-        <button type="submit">Submit</button>
-    </form>
-
-    <a href="{{ route('blog-posts.create') }}">Add Blog</a>
+    @else
+        <p>Blog post not found.</p>
+    @endif
 @endsection
